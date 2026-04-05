@@ -473,6 +473,12 @@ button {
   padding: 60px 0 80px;
 }
 
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 32px;
+  }
+}
+
 .hero-eyebrow {
   font-size: 13px;
   font-weight: 500;
