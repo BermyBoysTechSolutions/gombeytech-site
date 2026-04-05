@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ─── Mouse-Tracking Glow and Scroll Parallax ───
+  const nav = document.getElementById('main-nav');
   const circuitLayer = document.getElementById('circuit-parallax');
   const glowCursor = document.getElementById('glow-cursor');
 
