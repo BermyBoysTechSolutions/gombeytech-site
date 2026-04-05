@@ -23,20 +23,34 @@ document.addEventListener('DOMContentLoaded', () => {
   revealElements.forEach(el => revealObserver.observe(el));
 
 
-  // ─── Nav Scroll Behavior ───
-  const nav = document.getElementById('main-nav');
-  let lastScroll = 0;
+  // ─── Mouse-Tracking Glow and Scroll Parallax ───
+  const circuitLayer = document.getElementById('circuit-parallax');
+  const glowCursor = document.getElementById('glow-cursor');
 
   window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 40) {
+    const scrollY = window.scrollY;
+    // Parallax effect for the circuit layer
+    if (circuitLayer) {
+      circuitLayer.style.transform = `translateY(${scrollY * 0.25}px)`;
+    }
+
+    // Scroll-based nav behavior
+    if (scrollY > 40) {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
     }
-    lastScroll = currentScroll;
   }, { passive: true });
 
+  window.addEventListener('mousemove', (e) => {
+    // Dynamic glow following the cursor
+    if (glowCursor) {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      glowCursor.style.setProperty('--mouse-x', x + '%');
+      glowCursor.style.setProperty('--mouse-y', y + '%');
+    }
+  });
 
   // ─── Mobile Menu Toggle ───
   const mobileToggle = document.getElementById('mobile-toggle');
