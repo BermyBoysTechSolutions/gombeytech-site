@@ -476,6 +476,16 @@ button {
 @media (max-width: 768px) {
   .hero-content {
     padding-top: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-title {
+    max-width: 100%;
+  }
+
+  .hero-description {
+    max-width: 100%;
   }
 }
 
