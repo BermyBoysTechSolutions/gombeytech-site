@@ -1,37 +1,22 @@
-# Gombey Tech LLC — Agency Landing Page
+# Gombey AI — Private AI Workspace for Businesses
 
-## Project path
-`/Users/sultanyahya/.openclaw/workspace/projects/web-dev-agency/agency-landing-page`
+## Product
+Gombey AI gives teams access to the world's best AI models in a private, secure, white-labeled workspace.
 
-## Purpose
-This project is the main marketing site for **Gombey Tech LLC**.
+## Access
+- **Product:** https://chat.gombeytech.com
+- **Main Site:** https://gombeytech.com
 
-Primary goal:
-- convert cold outreach traffic into booked calls
+## Features
+- Multi-model access (GPT-4o, Claude 3.5, Gemini Pro, Kimi, and more)
+- 100% self-hosted — your data never leaves your infrastructure
+- File upload & RAG (Retrieval Augmented Generation)
+- Persistent memory across conversations
+- Team workspace with admin controls
+- White-labeled with your branding
 
-Secondary goals:
-- establish trust fast
-- make the agency look premium, technical, and high-taste
-- showcase a strong standard for future client work
+## Deployment
+Built on [LibreChat](https://librechat.ai) — the leading open-source AI chat platform.
 
-## Key files
-- Brief: `./ANTIGRAVITY-PROMPT.md`
-- Logo: `./assets/gombey-tech-logo.jpg`
-
-## CTA
-- Primary CTA: Book a Call
-- Calendly: `https://calendly.com/ianinho`
-
-## Positioning
-- Premium Web Development
-- Website Redesigns
-- Landing Pages
-- Premium business websites
-
-Automation may appear as a subtle secondary capability, but the core offer is web development.
-
-## Notes
-- The site should feel broad enough for many business types, not locked to one niche.
-- It should still resonate with high-aesthetic industries like med spas, cosmetic, and dental.
-- Motion and polish matter a lot.
-- Avoid generic AI slop, template feel, and cheesy futuristic visuals.
+## Company
+Gombey Tech LLC — Bermudian-owned technology company.
