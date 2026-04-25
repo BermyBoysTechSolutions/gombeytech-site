@@ -326,38 +326,105 @@
   </section>
 
   <!-- ═══════════════════ PRICING ═══════════════════ -->
-  <section class="process" id="pricing">
+  <section class="pricing" id="pricing">
     <div class="container">
-      <div class="process-header reveal">
+      <div class="pricing-header reveal">
         <span class="section-label">Pricing</span>
-        <h2 class="section-heading">Simple pricing. No per-seat fees. No surprises.</h2>
+        <h2 class="section-heading">Private AI Chat for Your Business</h2>
         <p class="section-subheading">
-          One flat fee covers your entire team. Unlimited users. Unlimited conversations. You just bring your own API keys.
+          Your own AI assistant. On your website. Under your brand. One-time setup. You control the keys.
         </p>
       </div>
 
-      <div class="process-timeline" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-        <div class="process-step reveal reveal-delay-1" id="pricing-starter" style="text-align: center;">
-          <div class="process-step-number" style="font-size: 2rem; margin-bottom: 8px;">$299/mo</div>
-          <h3 class="process-step-title">Starter</h3>
-          <p class="process-step-text">Up to 10 team members<br>Core AI models<br>File upload & RAG<br>Email support</p>
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card reveal reveal-delay-1" id="pricing-starter">
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-name">Starter</h3>
+            <div class="pricing-card-price">$1,500</div>
+            <p class="pricing-card-note">One-time setup + you pay API usage</p>
+          </div>
+          <ul class="pricing-card-features">
+            <li>White-label LibreChat instance</li>
+            <li>Branded domain (chat.yoursite.com)</li>
+            <li>1 preset AI agent (general assistant)</li>
+            <li>Up to 5,000 knowledge base documents</li>
+            <li>Basic models (GPT-4o-mini, MiniMax)</li>
+            <li>30 days support</li>
+          </ul>
+          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button pricing-cta" id="pricing-starter-cta">
+            Book a Demo <span class="arrow">→</span>
+          </a>
         </div>
-        <div class="process-step reveal reveal-delay-2" id="pricing-business" style="text-align: center; border: 1px solid var(--color-accent); background: var(--color-accent-muted);">
-          <div class="process-step-number" style="font-size: 2rem; margin-bottom: 8px;">$799/mo</div>
-          <h3 class="process-step-title">Business</h3>
-          <p class="process-step-text">Unlimited team members<br>All AI models<br>Advanced RAG & memory<br>Priority support<br>Custom branding</p>
+
+        <!-- Professional -->
+        <div class="pricing-card pricing-card-popular reveal reveal-delay-2" id="pricing-pro">
+          <div class="pricing-popular-badge">Most Popular</div>
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-name">Professional</h3>
+            <div class="pricing-card-price">$2,500</div>
+            <p class="pricing-card-note">One-time setup + you pay API usage</p>
+          </div>
+          <ul class="pricing-card-features">
+            <li>Everything in Starter</li>
+            <li>3 custom AI agents (specialized prompts)</li>
+            <li>Up to 20,000 knowledge base documents</li>
+            <li>Multiple models (GPT-4o, Claude, Gemini, DeepSeek)</li>
+            <li>1 MCP integration (Google Workspace, Slack, etc.)</li>
+            <li>Custom domain + SSL</li>
+            <li>60 days support + 1 model retrain</li>
+          </ul>
+          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button pricing-cta" id="pricing-pro-cta">
+            Book a Demo <span class="arrow">→</span>
+          </a>
         </div>
-        <div class="process-step reveal reveal-delay-3" id="pricing-enterprise" style="text-align: center;">
-          <div class="process-step-number" style="font-size: 2rem; margin-bottom: 8px;">Custom</div>
-          <h3 class="process-step-title">Enterprise</h3>
-          <p class="process-step-text">Dedicated infrastructure<br>SLA guarantee<br>Custom integrations<br>Dedicated account manager<br>On-premise deployment</p>
+
+        <!-- Ultra -->
+        <div class="pricing-card reveal reveal-delay-3" id="pricing-ultra">
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-name">Ultra</h3>
+            <div class="pricing-card-price">$3,500</div>
+            <p class="pricing-card-note">One-time setup + you pay API usage</p>
+          </div>
+          <ul class="pricing-card-features">
+            <li>Everything in Professional</li>
+            <li>5+ custom AI agents</li>
+            <li>Multiple MCP integrations</li>
+            <li>Multi-tenant (sub-accounts for clients)</li>
+            <li>API access for your developers</li>
+            <li>90 days support + 3 retrains</li>
+          </ul>
+          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button pricing-cta" id="pricing-ultra-cta">
+            Book a Demo <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card pricing-card-enterprise reveal reveal-delay-4" id="pricing-enterprise">
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-name">Enterprise</h3>
+            <div class="pricing-card-price">Contact Sales</div>
+            <p class="pricing-card-note">Custom LLM fine-tuning & dedicated infrastructure</p>
+          </div>
+          <ul class="pricing-card-features">
+            <li>Everything in Ultra</li>
+            <li>Custom LLM fine-tuning (domain-specific training)</li>
+            <li>Dedicated VPS / on-premise deployment</li>
+            <li>SLA guarantees</li>
+            <li>White-glove onboarding</li>
+            <li>Ongoing managed service</li>
+          </ul>
+          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button-outline pricing-cta" id="pricing-enterprise-cta">
+            Book a Call <span class="arrow">→</span>
+          </a>
         </div>
       </div>
 
-      <div class="process-cta reveal">
-        <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button" id="pricing-book-call">
-          Schedule a Demo <span class="arrow">→</span>
-        </a>
+      <div class="pricing-footer reveal">
+        <p class="pricing-footer-note">
+          <strong>How API billing works:</strong> You bring your own OpenRouter API key and pay for usage directly. 
+          No markup, no surprise bills. Typical business usage runs $5–$50/month depending on team size.
+        </p>
       </div>
     </div>
   </section>
