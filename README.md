@@ -8,7 +8,7 @@ Gombey AI gives teams access to the world's best AI models in a private, secure,
 - **Main Site:** https://gombeytech.com
 
 ## Features
-- Multi-model access (GPT-4o, Claude 3.5, Gemini Pro, Kimi, and more)
+- Multi-model access (GPT-5.5, Claude Opus 4.7, Gemini 3 Pro, Kimi K2.6, and more)
 - 100% self-hosted — your data never leaves your infrastructure
 - File upload & RAG (Retrieval Augmented Generation)
 - Persistent memory across conversations
