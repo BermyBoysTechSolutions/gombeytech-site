@@ -1140,6 +1140,13 @@ button {
   margin-bottom: 8px;
 }
 
+.pricing-period {
+  font-size: 0.5em;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-left: 0.25em;
+}
+
 .pricing-card-note {
   font-size: 13px;
   color: var(--color-text-muted);
