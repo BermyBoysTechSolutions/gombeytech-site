@@ -1517,3 +1517,110 @@ button {
     scroll-behavior: auto;
   }
 }
+
+/* ─── Landing-page clarity and accessibility refinements ─── */
+body.js-ready .reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+body.js-ready .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.nav-inner {
+  height: 96px;
+}
+
+.nav-logo img {
+  height: 84px;
+}
+
+.nav-mobile-menu {
+  top: 96px;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-note {
+  margin-top: 22px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.featured-card {
+  min-height: 238px;
+}
+
+.featured-card-overlay {
+  position: relative !important;
+  inset: auto !important;
+  padding: 40px !important;
+  background: none !important;
+  transform: none !important;
+}
+
+@media (min-width: 1025px) {
+  .featured-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-card:first-child {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-inner {
+    height: 88px;
+  }
+
+  .nav-logo img {
+    height: 76px;
+  }
+
+  .nav-mobile-menu {
+    top: 88px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 64px;
+  }
+
+  .hero-actions,
+  .hero-actions .cta-button,
+  .hero-actions .cta-button-outline {
+    width: 100%;
+  }
+
+  .hero-actions .cta-button,
+  .hero-actions .cta-button-outline {
+    justify-content: center;
+  }
+
+  .featured-card-overlay {
+    padding: 28px !important;
+  }
+
+  .sticky-cta {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .sticky-cta .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

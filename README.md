@@ -1,22 +1,18 @@
-# Gombey AI — Private AI Workspace for Businesses
+# Gombey AI landing page
 
-## Product
-Gombey AI gives teams access to the world's best AI models in a private, secure, white-labeled workspace.
+Static landing page for Gombey AI, a business workspace for teams using connected AI model providers.
 
-## Access
-- **Product:** https://chat.gombeytech.com
-- **Main Site:** https://gombeytech.com
+## Public sites
 
-## Features
-- Multi-model access (GPT-5.5, Claude Opus 4.7, Gemini 3 Pro, Kimi K2.6, and more)
-- 100% self-hosted — your data never leaves your infrastructure
-- File upload & RAG (Retrieval Augmented Generation)
-- Persistent memory across conversations
-- Team workspace with admin controls
-- White-labeled with your branding
+- Main site: https://gombeytech.com
+- Demo booking: https://calendly.com/ianinho
 
-## Deployment
-Built on [LibreChat](https://librechat.ai) — the leading open-source AI chat platform.
+## Local preview
 
-## Company
-Gombey Tech LLC — Bermudian-owned technology company.
+Serve this directory with any static HTTP server, for example:
+
+```bash
+python3 -m http.server 4173
+```
+
+The landing page intentionally does not link to `chat.gombeytech.com` until that product hostname has an authoritative deployed target and resolves publicly.

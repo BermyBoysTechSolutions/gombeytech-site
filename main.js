@@ -1,197 +1,89 @@
-/* ===================================================================
-   GOMBEY TECH LLC — Main JavaScript
-   Scroll reveals, nav behavior, mobile menu, number counters,
-   mouse-tracking card effects, sticky CTA
-   =================================================================== */
+/* Gombey AI landing page interactions. */
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('js-ready');
 
-  // ─── Scroll Reveal (IntersectionObserver) ───
-  const revealElements = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -60px 0px'
-  });
-
-  revealElements.forEach(el => revealObserver.observe(el));
-
-
-  // ─── Mouse-Tracking Glow and Scroll Parallax ───
   const nav = document.getElementById('main-nav');
   const circuitLayer = document.getElementById('circuit-parallax');
   const glowCursor = document.getElementById('glow-cursor');
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const stickyCta = document.getElementById('sticky-cta');
+  const heroSection = document.getElementById('hero');
+  let menuOpen = false;
+
+  const revealElements = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+  } else {
+    revealElements.forEach((element) => element.classList.add('visible'));
+  }
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    // Parallax effect for the circuit layer
-    if (circuitLayer) {
-      circuitLayer.style.transform = `translateY(${scrollY * 0.25}px)`;
-    }
-
-    // Scroll-based nav behavior
-    if (scrollY > 40) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
+    if (circuitLayer) circuitLayer.style.transform = `translateY(${scrollY * 0.25}px)`;
+    if (nav) nav.classList.toggle('scrolled', scrollY > 40);
   }, { passive: true });
 
-  window.addEventListener('mousemove', (e) => {
-    // Dynamic glow following the cursor
-    if (glowCursor) {
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      glowCursor.style.setProperty('--mouse-x', x + '%');
-      glowCursor.style.setProperty('--mouse-y', y + '%');
-    }
-  });
+  window.addEventListener('mousemove', (event) => {
+    if (!glowCursor) return;
+    glowCursor.style.setProperty('--mouse-x', `${(event.clientX / window.innerWidth) * 100}%`);
+    glowCursor.style.setProperty('--mouse-y', `${(event.clientY / window.innerHeight) * 100}%`);
+  }, { passive: true });
 
-  // ─── Mobile Menu Toggle ───
-  const mobileToggle = document.getElementById('mobile-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  let menuOpen = false;
-
-  mobileToggle.addEventListener('click', () => {
-    menuOpen = !menuOpen;
+  const setMenuState = (open) => {
+    menuOpen = open;
     mobileMenu.classList.toggle('active', menuOpen);
-    // Animate hamburger to X
+    mobileToggle.setAttribute('aria-expanded', String(menuOpen));
+    mobileToggle.setAttribute('aria-label', menuOpen ? 'Close navigation menu' : 'Open navigation menu');
     const spans = mobileToggle.querySelectorAll('span');
-    if (menuOpen) {
-      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      spans[1].style.opacity = '0';
-      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-      document.body.style.overflow = 'hidden';
-    } else {
-      spans[0].style.transform = '';
-      spans[1].style.opacity = '1';
-      spans[2].style.transform = '';
-      document.body.style.overflow = '';
-    }
-  });
-
-  window.closeMobileMenu = () => {
-    menuOpen = false;
-    mobileMenu.classList.remove('active');
-    const spans = mobileToggle.querySelectorAll('span');
-    spans[0].style.transform = '';
-    spans[1].style.opacity = '1';
-    spans[2].style.transform = '';
-    document.body.style.overflow = '';
+    spans[0].style.transform = menuOpen ? 'rotate(45deg) translate(5px, 5px)' : '';
+    spans[1].style.opacity = menuOpen ? '0' : '1';
+    spans[2].style.transform = menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : '';
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
   };
 
-
-  // ─── Sticky CTA Visibility ───
-  const stickyCta = document.getElementById('sticky-cta');
-  const heroSection = document.getElementById('hero');
-
-  const stickyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        stickyCta.classList.add('visible');
-      } else {
-        stickyCta.classList.remove('visible');
-      }
-    });
-  }, {
-    threshold: 0
+  mobileToggle.addEventListener('click', () => setMenuState(!menuOpen));
+  mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenuState(false)));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuOpen) setMenuState(false);
   });
 
-  stickyObserver.observe(heroSection);
+  window.closeMobileMenu = () => setMenuState(false);
 
-
-  // ─── Number Counter Animation ───
-  const trustSection = document.getElementById('trust-strip');
-  let counted = false;
-
-  const countObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !counted) {
-        counted = true;
-        animateCounters();
-      }
-    });
-  }, { threshold: 0.5 });
-
-  countObserver.observe(trustSection);
-
-  function animateCounters() {
-    const counters = document.querySelectorAll('.trust-number[data-count]');
-    counters.forEach(counter => {
-      const target = parseInt(counter.dataset.count);
-      const suffix = counter.textContent.includes('%') ? '%' : (counter.textContent.includes('+') ? '+' : '');
-      const duration = 1800;
-      const startTime = performance.now();
-
-      function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // Ease out cubic
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const current = Math.round(eased * target);
-
-        if (suffix === '%') {
-          counter.textContent = current + '%';
-        } else {
-          counter.textContent = current + '+';
-        }
-
-        if (progress < 1) {
-          requestAnimationFrame(update);
-        } else {
-          if (suffix === '%') {
-            counter.textContent = target + '%';
-          } else if (target === 3) {
-            counter.textContent = '<' + target;
-          } else {
-            counter.textContent = target + '+';
-          }
-        }
-      }
-
-      requestAnimationFrame(update);
-    });
+  if ('IntersectionObserver' in window && stickyCta && heroSection) {
+    const stickyObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => stickyCta.classList.toggle('visible', !entry.isIntersecting));
+    }, { threshold: 0 });
+    stickyObserver.observe(heroSection);
   }
 
-
-  // ─── Mouse-Tracking Glow on Service Cards ───
-  const serviceCards = document.querySelectorAll('.service-card');
-  serviceCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
+  document.querySelectorAll('.service-card').forEach((card) => {
+    card.addEventListener('mousemove', (event) => {
       const rect = card.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      card.style.setProperty('--mouse-x', x + '%');
-      card.style.setProperty('--mouse-y', y + '%');
-    });
+      card.style.setProperty('--mouse-x', `${((event.clientX - rect.left) / rect.width) * 100}%`);
+      card.style.setProperty('--mouse-y', `${((event.clientY - rect.top) / rect.height) * 100}%`);
+    }, { passive: true });
   });
 
-
-  // ─── Smooth Scroll for Anchor Links ───
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      e.preventDefault();
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        const navHeight = nav.offsetHeight;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (event) => {
+      const targetId = anchor.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (!target) return;
+      event.preventDefault();
+      const navHeight = nav ? nav.offsetHeight : 0;
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - navHeight, behavior: 'smooth' });
     });
   });
-
-
-
-
 });

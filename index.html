@@ -3,38 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gombey AI — Private AI Chat for Your Business</title>
-  <meta name="description" content="Gombey AI gives your team access to the world's best AI models in a private, branded workspace. No data leaks. No subscription chaos. Just AI that works.">
+  <title>Gombey AI — A governed AI workspace for your team</title>
+  <meta name="description" content="Gombey AI gives business teams one branded workspace for approved AI model providers, team access, and deployment choices that make data handling explicit.">
+  <link rel="canonical" href="https://gombeytech.com/">
   <meta name="theme-color" content="#0a0a0c">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gombeytech.com/">
+  <meta property="og:title" content="Gombey AI — A governed AI workspace for your team">
+  <meta property="og:description" content="One branded workspace for business teams using AI with clearer deployment, access, and provider-key choices.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Gombey AI — A governed AI workspace for your team">
+  <meta name="twitter:description" content="One branded workspace for business teams using AI with clearer deployment, access, and provider-key choices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/gombey-ai-logo.png" type="image/png">
 </head>
 <body>
 
-  <!-- Dynamic Background Layers -->
-  <div class="bg-overlay">
+  <div class="bg-overlay" aria-hidden="true">
     <div class="circuit-layer" id="circuit-parallax"></div>
     <div class="glow-cursor" id="glow-cursor"></div>
   </div>
 
-  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
-  <nav class="nav" id="main-nav">
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="nav-logo" id="nav-logo">
-        <img src="assets/gombey-ai-logo.png" alt="Gombey AI Logo">
+      <a href="#hero" class="nav-logo" id="nav-logo" aria-label="Gombey AI home">
+        <img src="assets/gombey-ai-logo.png" alt="Gombey AI">
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#models">Models</a></li>
-        <li><a href="#security">Security</a></li>
+        <li><a href="#features">Workspace</a></li>
+        <li><a href="#models">Model access</a></li>
+        <li><a href="#security">Deployment</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li>
-          <a href="https://chat.gombeytech.com" target="_blank" rel="noopener" class="cta-button nav-cta" id="nav-get-started">
-            Launch AI <span class="arrow">→</span>
+          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button nav-cta" id="nav-get-started">
+            Book a demo <span class="arrow" aria-hidden="true">→</span>
           </a>
         </li>
       </ul>
-      <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+      <button class="nav-mobile-toggle" id="mobile-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -42,469 +50,130 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="nav-mobile-menu" id="mobile-menu">
-    <a href="#features" onclick="closeMobileMenu()">Features</a>
-    <a href="#models" onclick="closeMobileMenu()">Models</a>
-    <a href="#security" onclick="closeMobileMenu()">Security</a>
-    <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
-    <a href="https://chat.gombeytech.com" target="_blank" rel="noopener" class="cta-button" id="mobile-get-started">
-      Launch AI <span class="arrow">→</span>
+  <div class="nav-mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="#features">Workspace</a>
+    <a href="#models">Model access</a>
+    <a href="#security">Deployment</a>
+    <a href="#pricing">Pricing</a>
+    <a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button" id="mobile-get-started">
+      Book a 30-minute demo <span class="arrow" aria-hidden="true">→</span>
     </a>
   </div>
 
-  <!-- ═══════════════════ HERO ═══════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero-grid"></div>
-    <div class="container hero-content">
-      <p class="hero-eyebrow">Private AI Workspace</p>
-      <h1 class="hero-title">
-        Your team's AI. <span class="accent">Your data. Your control.</span>
-      </h1>
-      <p class="hero-description">
-        Gombey AI gives your business access to the world's best AI models — GPT-5.5, Claude Opus 4.7, Gemini 3 Pro, Kimi K2.6, and more — in a single private workspace. No data leaves your hands.
-      </p>
-      <div class="hero-actions">
-        <a href="https://chat.gombeytech.com" target="_blank" rel="noopener" class="cta-button" id="hero-get-started">
-          Launch Gombey AI <span class="arrow">→</span>
-        </a>
-        <a href="#features" class="cta-button-outline" id="hero-see-features">
-          See How It Works
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ TRUST STRIP ═══════════════════ -->
-  <section class="trust-strip reveal" id="trust-strip">
-    <div class="container">
-      <div class="trust-strip-inner">
-        <div class="trust-item">
-          <span class="trust-number" data-count="15">0+</span>
-          <span class="trust-label">AI Models</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-number" data-count="100">0%</span>
-          <span class="trust-label">Data Private</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-number" data-count="1">1</span>
-          <span class="trust-label">Unified Platform</span>
-        </div>
-        <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-number">24/7</span>
-          <span class="trust-label">Always On</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ FEATURES ═══════════════════ -->
-  <section class="services" id="features">
-    <div class="container">
-      <div class="services-header reveal">
-        <span class="section-label">What You Get</span>
-        <h2 class="section-heading">One platform. Every major AI. Zero compromises.</h2>
-        <p class="section-subheading">
-          Stop juggling subscriptions and worrying about data privacy. Gombey AI brings the best models together in a workspace you control.
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow">AI for teams that need a clear operating model</p>
+        <h1 class="hero-title">
+          Give your team a better way to use AI. <span class="accent">Keep the decisions yours.</span>
+        </h1>
+        <p class="hero-description">
+          Gombey AI brings approved model providers, team access, and a branded workspace into one place. Choose the deployment that fits your team, bring your provider keys, and review the data path before you roll it out.
         </p>
+        <div class="hero-actions">
+          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button" id="hero-get-started">
+            Book a 30-minute demo <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#how-it-works" class="cta-button-outline" id="hero-see-features">See how it works</a>
+        </div>
+        <p class="hero-note">A practical starting point for professional services, operations, and client-facing teams.</p>
       </div>
+    </section>
 
-      <div class="services-grid">
-        <!-- Feature 1 -->
-        <div class="service-card reveal reveal-delay-1" id="feature-multi-model">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="3" />
-              <path d="M12 2v4" />
-              <path d="M12 18v4" />
-              <path d="M4.93 4.93l2.83 2.83" />
-              <path d="M16.24 16.24l2.83 2.83" />
-              <path d="M2 12h4" />
-              <path d="M18 12h4" />
-              <path d="M4.93 19.07l2.83-2.83" />
-              <path d="M16.24 7.76l2.83-2.83" />
-            </svg>
-          </div>
-          <h3 class="service-title">Multi-Model Access</h3>
-          <p class="service-description">
-            Chat with GPT-5.5, Claude Opus 4.7, Gemini 3 Pro, Kimi K2.6, and more — all from one interface. Switch models mid-conversation.
-          </p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="service-card reveal reveal-delay-2" id="feature-private">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg>
-          </div>
-          <h3 class="service-title">100% Private & Secure</h3>
-          <p class="service-description">
-            Self-hosted on your infrastructure. Your conversations, files, and data never touch third-party servers or training pipelines.
-          </p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="service-card reveal reveal-delay-3" id="feature-files">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-              <line x1="16" y1="13" x2="8" y2="13" />
-              <line x1="16" y1="17" x2="8" y2="17" />
-              <polyline points="10 9 9 9 8 9" />
-            </svg>
-          </div>
-          <h3 class="service-title">File Upload & RAG</h3>
-          <p class="service-description">
-            Upload documents, PDFs, and spreadsheets. The AI reads and references them in context — like having a research assistant.
-          </p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="service-card reveal reveal-delay-4" id="feature-memory">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-              <line x1="12" y1="22.08" x2="12" y2="12" />
-            </svg>
-          </div>
-          <h3 class="service-title">Persistent Memory</h3>
-          <p class="service-description">
-            The AI remembers context across conversations. No repeating yourself. It learns your business, your tone, your preferences.
-          </p>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="service-card reveal reveal-delay-5" id="feature-team">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-          </div>
-          <h3 class="service-title">Team Workspace</h3>
-          <p class="service-description">
-            Invite your whole team. Shared conversations, individual accounts, and admin controls — all under your brand.
-          </p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="service-card reveal reveal-delay-5" id="feature-branded">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
-          </div>
-          <h3 class="service-title">White-Labeled</h3>
-          <p class="service-description">
-            Your logo, your colors, your domain. Gombey AI looks like your product — because it is. Your clients never see our name.
-          </p>
+    <section class="trust-strip reveal" id="trust-strip" aria-label="Gombey AI product principles">
+      <div class="container">
+        <div class="trust-strip-inner">
+          <div class="trust-item"><span class="trust-number">One</span><span class="trust-label">Team workspace</span></div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item"><span class="trust-number">Your</span><span class="trust-label">Provider keys</span></div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item"><span class="trust-number">Clear</span><span class="trust-label">Deployment choices</span></div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item"><span class="trust-number">Built</span><span class="trust-label">For business use</span></div>
         </div>
       </div>
+    </section>
 
-      <div class="services-cta reveal">
-        <a href="https://chat.gombeytech.com" target="_blank" rel="noopener" class="cta-button" id="features-launch-ai">
-          Try Gombey AI <span class="arrow">→</span>
-        </a>
+    <section class="services" id="features">
+      <div class="container">
+        <div class="services-header reveal">
+          <span class="section-label">The workspace</span>
+          <h2 class="section-heading">A shared operating layer for everyday AI work.</h2>
+          <p class="section-subheading">Give your team a consistent place to work with AI instead of leaving access, prompts, and files scattered across personal accounts.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal reveal-delay-1" id="feature-multi-model"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><h3 class="service-title">Model choice in one place</h3><p class="service-description">Connect the providers your team uses and give people one consistent interface for comparing the right tool to the task.</p></div>
+          <div class="service-card reveal reveal-delay-2" id="feature-private"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3 class="service-title">Deployment you can explain</h3><p class="service-description">Choose a shared workspace or a dedicated deployment. We make the hosting model and provider-key responsibility part of the conversation.</p></div>
+          <div class="service-card reveal reveal-delay-3" id="feature-files"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div><h3 class="service-title">Work with business files</h3><p class="service-description">Use the workspace for document-heavy work such as research, drafting, and internal knowledge tasks, subject to your chosen configuration.</p></div>
+          <div class="service-card reveal reveal-delay-4" id="feature-memory"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3 class="service-title">Repeatable team workflows</h3><p class="service-description">Turn useful prompts and operating habits into a shared workflow rather than asking every teammate to start from scratch.</p></div>
+          <div class="service-card reveal reveal-delay-5" id="feature-team"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 class="service-title">Team access and admin</h3><p class="service-description">Bring users into a managed workspace with the account and access controls included in the deployment you choose.</p></div>
+          <div class="service-card reveal reveal-delay-5" id="feature-branded"><div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3 class="service-title">A workspace that fits your brand</h3><p class="service-description">Professional and Ultra deployments add the customization options described in the plan comparison, including custom domains and branding.</p></div>
+        </div>
+        <div class="services-cta reveal"><a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button" id="features-launch-ai">Talk through your use case <span class="arrow" aria-hidden="true">→</span></a></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════ AI MODELS ═══════════════════ -->
-  <section class="why-section" id="models">
-    <div class="container">
-      <div class="why-grid">
-        <div class="why-content reveal">
-          <span class="section-label">The Models</span>
-          <h2 class="section-heading">Access the best AI in the world — from one place.</h2>
-          <p class="section-subheading">
-            Why pay for 5 different AI subscriptions when you can have them all? Gombey AI connects to the leading models through a single, consistent interface.
-          </p>
-          <div class="why-features">
-            <div class="why-feature">
-              <div class="why-feature-marker">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12" /></svg>
-              </div>
-              <div>
-                <div class="why-feature-title">OpenAI GPT-5.5</div>
-                <p class="why-feature-text">Best-in-class reasoning, coding, and creative writing.</p>
-              </div>
-            </div>
-            <div class="why-feature">
-              <div class="why-feature-marker">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12" /></svg>
-              </div>
-              <div>
-                <div class="why-feature-title">Anthropic Claude Opus 4.7</div>
-                <p class="why-feature-text">Superior analysis, long-context understanding, and nuanced responses.</p>
-              </div>
-            </div>
-            <div class="why-feature">
-              <div class="why-feature-marker">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12" /></svg>
-              </div>
-              <div>
-                <div class="why-feature-title">Google Gemini 3 Pro</div>
-                <p class="why-feature-text">Multimodal powerhouse — text, images, and documents in one conversation.</p>
-              </div>
-            </div>
-            <div class="why-feature">
-              <div class="why-feature-marker">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12" /></svg>
-              </div>
-              <div>
-                <div class="why-feature-title">Moonshot Kimi K2.6</div>
-                <p class="why-feature-text">Cutting-edge models with exceptional reasoning and coding capabilities.</p>
-              </div>
+    <section class="why-section" id="models">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-content reveal">
+            <span class="section-label">Model access</span>
+            <h2 class="section-heading">Give each task the right model, without changing the team’s workflow.</h2>
+            <p class="section-subheading">Gombey AI is designed to give teams a consistent front door while the connected model providers and usage costs stay visible.</p>
+            <div class="why-features">
+              <div class="why-feature"><div class="why-feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="why-feature-title">Compare approaches</div><p class="why-feature-text">Use the model that fits the task instead of forcing every request through one tool.</p></div></div>
+              <div class="why-feature"><div class="why-feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="why-feature-title">Bring your own provider keys</div><p class="why-feature-text">Your plan uses the provider or OpenRouter keys you supply; model availability and usage charges depend on that configuration.</p></div></div>
+              <div class="why-feature"><div class="why-feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="why-feature-title">Keep a consistent user experience</div><p class="why-feature-text">Teams can learn one workspace while you decide which providers and capabilities are appropriate.</p></div></div>
             </div>
           </div>
-        </div>
-        <div class="why-visual reveal reveal-delay-2">
-          <div class="why-stat-card">
-            <div class="why-stat-number">15+</div>
-            <div class="why-stat-label">AI Models Available</div>
-            <div class="why-stat-detail">
-              From OpenAI, Anthropic, Google, Meta, Mistral, and more — all accessible through a single subscription. New models added as they're released.
-            </div>
-          </div>
+          <div class="why-visual reveal reveal-delay-2"><div class="why-stat-card"><div class="why-stat-number">One</div><div class="why-stat-label">workspace for model access</div><div class="why-stat-detail">A clearer place to manage team access, deployment choices, and the provider keys that power your AI usage.</div></div></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════ SECURITY ═══════════════════ -->
-  <section class="featured-work" id="security">
-    <div class="container">
-      <div class="featured-header reveal">
-        <div>
-          <span class="section-label">Security First</span>
-          <h2 class="section-heading">Your data stays yours. Period.</h2>
+    <section class="featured-work" id="security">
+      <div class="container">
+        <div class="featured-header reveal"><div><span class="section-label">Deployment and data</span><h2 class="section-heading">Privacy is a configuration decision, not a slogan.</h2><p class="section-subheading">We’ll help you match the workspace to your requirements and review which systems handle data.</p></div></div>
+        <div class="featured-grid">
+          <div class="featured-card reveal reveal-delay-1" id="security-hosted"><div class="featured-card-overlay" style="position:relative; padding: 40px;"><div class="featured-card-tag">Hosting</div><h3 class="featured-card-title">Shared or dedicated</h3><p class="featured-card-desc">Starter is a shared, multi-tenant workspace. Professional is described as a dedicated VPS deployment. The right choice depends on your team and requirements.</p></div></div>
+          <div class="featured-card reveal reveal-delay-2" id="security-encryption"><div class="featured-card-overlay" style="position:relative; padding: 40px;"><div class="featured-card-tag">Provider policy</div><h3 class="featured-card-title">No blanket guarantees</h3><p class="featured-card-desc">Your data path depends on the selected deployment and the providers you connect. Review provider retention and training policies before sending sensitive work.</p></div></div>
+          <div class="featured-card reveal reveal-delay-3" id="security-compliance"><div class="featured-card-overlay" style="position:relative; padding: 40px;"><div class="featured-card-tag">Control</div><h3 class="featured-card-title">Admin visibility</h3><p class="featured-card-desc">Use the workspace and plan-specific controls to manage users and access. We’ll confirm the exact configuration during your demo.</p></div></div>
         </div>
       </div>
+    </section>
 
-      <div class="featured-grid">
-        <!-- Security 1 -->
-        <div class="featured-card reveal reveal-delay-1" id="security-hosted">
-          <div class="featured-card-overlay" style="position:relative; padding: 40px;">
-            <div class="featured-card-tag">Deployment</div>
-            <h3 class="featured-card-title">Self-Hosted Infrastructure</h3>
-            <p class="featured-card-desc">Gombey AI runs on servers you control — whether that's your own hardware or a private cloud instance. No shared servers. No data mingling.</p>
-          </div>
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="pricing-header reveal"><span class="section-label">Pricing</span><h2 class="section-heading">Start with the deployment model that fits.</h2><p class="section-subheading">The prices below separate setup from the ongoing workspace tier. Provider/API usage is billed separately through the keys you bring.</p></div>
+        <div class="pricing-grid">
+          <div class="pricing-card reveal reveal-delay-1" id="pricing-starter"><div class="pricing-card-header"><h3 class="pricing-card-name">Starter</h3><div class="pricing-card-price">$15<span class="pricing-period">/month</span></div><p class="pricing-card-note">+ $1,500 one-time setup</p></div><ul class="pricing-card-features"><li>Shared AI workspace (multi-tenant)</li><li>Access to the standard Gombey AI workspace</li><li>Preset general assistant</li><li>Knowledge-base document capacity</li><li>Provider/API keys supplied by you</li><li>Community support</li></ul><a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button pricing-cta" id="pricing-starter-cta">Discuss Starter <span class="arrow" aria-hidden="true">→</span></a></div>
+          <div class="pricing-card pricing-card-popular reveal reveal-delay-2" id="pricing-pro"><div class="pricing-popular-badge">Most popular</div><div class="pricing-card-header"><h3 class="pricing-card-name">Professional</h3><div class="pricing-card-price">$25<span class="pricing-period">/month</span></div><p class="pricing-card-note">+ $2,500 one-time setup</p></div><ul class="pricing-card-features"><li>Everything in Starter</li><li><strong>Dedicated VPS instance</strong></li><li><strong>Custom domain</strong> (chat.yoursite.com)</li><li>Custom AI agents</li><li>Larger knowledge-base capacity</li><li>Multiple connected model providers</li><li>1 MCP integration</li><li>SSL certificate included</li><li>Priority email support</li></ul><a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button pricing-cta" id="pricing-pro-cta">Discuss Professional <span class="arrow" aria-hidden="true">→</span></a></div>
+          <div class="pricing-card reveal reveal-delay-3" id="pricing-ultra"><div class="pricing-card-header"><h3 class="pricing-card-name">Ultra</h3><div class="pricing-card-price">$50<span class="pricing-period">/month</span></div><p class="pricing-card-note">+ $3,500 one-time setup</p></div><ul class="pricing-card-features"><li>Everything in Professional</li><li><strong>Full white-labeling</strong></li><li><strong>Custom branded interface</strong></li><li>Additional custom AI agents</li><li>Multiple MCP integrations</li><li>Multi-tenant sub-accounts</li><li>API access for your developers</li><li>Dedicated account manager</li><li>Priority support</li></ul><a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button pricing-cta" id="pricing-ultra-cta">Discuss Ultra <span class="arrow" aria-hidden="true">→</span></a></div>
+          <div class="pricing-card pricing-card-enterprise reveal reveal-delay-4" id="pricing-enterprise"><div class="pricing-card-header"><h3 class="pricing-card-name">Enterprise</h3><div class="pricing-card-price">Contact sales</div><p class="pricing-card-note">Scope and deployment confirmed together</p></div><ul class="pricing-card-features"><li>Everything in Ultra, where applicable</li><li>Custom deployment discussion</li><li>Dedicated or on-premise options, subject to scope</li><li>Service and support terms agreed during discovery</li><li>White-glove onboarding</li><li>Ongoing managed service options</li></ul><a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button-outline pricing-cta" id="pricing-enterprise-cta">Talk to sales <span class="arrow" aria-hidden="true">→</span></a></div>
         </div>
+        <div class="pricing-footer reveal"><p class="pricing-footer-note"><strong>How billing works:</strong> The one-time setup fee covers initial configuration; the monthly fee covers the selected workspace/hosting tier. You bring your own OpenRouter or provider keys, so model usage is separate and varies by team. Confirm the exact scope and support level in your demo.</p></div>
+      </div>
+    </section>
 
-        <!-- Security 2 -->
-        <div class="featured-card reveal reveal-delay-2" id="security-encryption">
-          <div class="featured-card-overlay" style="position:relative; padding: 40px;">
-            <div class="featured-card-tag">Privacy</div>
-            <h3 class="featured-card-title">No Training on Your Data</h3>
-            <p class="featured-card-desc">Unlike ChatGPT Enterprise or Claude for Work, your conversations are never used to train models. They're yours and yours alone.</p>
-          </div>
-        </div>
-
-        <!-- Security 3 -->
-        <div class="featured-card reveal reveal-delay-3" id="security-compliance">
-          <div class="featured-card-overlay" style="position:relative; padding: 40px;">
-            <div class="featured-card-tag">Control</div>
-            <h3 class="featured-card-title">Full Admin Control</h3>
-            <p class="featured-card-desc">Manage users, monitor usage, set permissions, and control exactly what features your team can access. You're the admin.</p>
-          </div>
+    <section class="capabilities" id="how-it-works">
+      <div class="container">
+        <div class="reveal"><span class="section-label">How it works</span><h2 class="section-heading">A straightforward path from use case to rollout.</h2><p class="section-subheading">Start with the work your team wants to improve, then choose the configuration that makes sense for the data and people involved.</p></div>
+        <div class="capabilities-grid">
+          <div class="capability-card reveal reveal-delay-1" id="setup-1"><h4 class="capability-card-title">1. Define the work</h4><p class="capability-card-text">Bring a real workflow, such as research, drafting, knowledge lookup, or internal support, to the conversation.</p></div>
+          <div class="capability-card reveal reveal-delay-2" id="setup-2"><h4 class="capability-card-title">2. Choose the deployment</h4><p class="capability-card-text">We compare shared, dedicated, branded, and other scoped options, including who supplies the provider keys.</p></div>
+          <div class="capability-card reveal reveal-delay-3" id="setup-3"><h4 class="capability-card-title">3. Configure the team</h4><p class="capability-card-text">Set up the workspace, access, and agreed integrations, then give your team a clear place to start.</p></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════ PRICING ═══════════════════ -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="pricing-header reveal">
-        <span class="section-label">Pricing</span>
-        <h2 class="section-heading">Private AI Chat for Your Business</h2>
-        <p class="section-subheading">
-          Choose your deployment model. From shared workspace to fully white-labeled AI under your brand.
-        </p>
-      </div>
+    <section class="final-cta" id="final-cta"><div class="container"><div class="final-cta-content reveal"><span class="section-label" style="justify-content:center;">Next step</span><h2 class="section-heading">See whether Gombey AI fits your team’s work.</h2><p class="section-subheading">Book the 30-minute meeting shown in our scheduler. We’ll walk through the workspace, deployment options, and the questions that matter for your data.</p><div class="final-cta-actions"><a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button" id="final-book-demo">Book a 30-minute demo <span class="arrow" aria-hidden="true">→</span></a><a href="#pricing" class="cta-button-outline" id="final-see-pricing">Review pricing</a></div></div></div></section>
+  </main>
 
-      <div class="pricing-grid">
-        <!-- Starter -->
-        <div class="pricing-card reveal reveal-delay-1" id="pricing-starter">
-          <div class="pricing-card-header">
-            <h3 class="pricing-card-name">Starter</h3>
-            <div class="pricing-card-price">$15<span class="pricing-period">/month</span></div>
-            <p class="pricing-card-note">+ $1,500 one-time setup</p>
-          </div>
-          <ul class="pricing-card-features">
-            <li>Shared AI workspace (multi-tenant)</li>
-            <li>Access to chat.gombeytech.com</li>
-            <li>1 preset AI agent (general assistant)</li>
-            <li>Up to 5,000 knowledge base documents</li>
-            <li>Efficient models (MiniMax M2.7, GPT-5.5)</li>
-            <li>Community support</li>
-          </ul>
-          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button pricing-cta" id="pricing-starter-cta">
-            Book a Demo <span class="arrow">→</span>
-          </a>
-        </div>
+  <footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-left"><img src="assets/gombey-ai-logo.png" alt="Gombey AI" class="footer-logo"><span class="footer-brand">Gombey AI — by Gombey Tech LLC</span></div><div class="footer-right"><a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); margin-right: 20px;">Book a demo</a>© 2026 Gombey Tech LLC. All rights reserved.</div></div></div></footer>
 
-        <!-- Professional -->
-        <div class="pricing-card pricing-card-popular reveal reveal-delay-2" id="pricing-pro">
-          <div class="pricing-popular-badge">Most Popular</div>
-          <div class="pricing-card-header">
-            <h3 class="pricing-card-name">Professional</h3>
-            <div class="pricing-card-price">$25<span class="pricing-period">/month</span></div>
-            <p class="pricing-card-note">+ $2,500 one-time setup</p>
-          </div>
-          <ul class="pricing-card-features">
-            <li>Everything in Starter</li>
-            <li><strong>Dedicated VPS instance</strong></li>
-            <li><strong>Custom domain</strong> (chat.yoursite.com)</li>
-            <li>3 custom AI agents (specialized prompts)</li>
-            <li>Up to 20,000 knowledge base documents</li>
-            <li>Multiple models (GPT-5.5, Claude Opus 4.7, Gemini 3 Pro, DeepSeek V4, MiniMax M2.7)</li>
-            <li>1 MCP integration (Google Workspace, Slack, etc.)</li>
-            <li>SSL certificate included</li>
-            <li>Priority email support</li>
-          </ul>
-          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button pricing-cta" id="pricing-pro-cta">
-            Book a Demo <span class="arrow">→</span>
-          </a>
-        </div>
-
-        <!-- Ultra -->
-        <div class="pricing-card reveal reveal-delay-3" id="pricing-ultra">
-          <div class="pricing-card-header">
-            <h3 class="pricing-card-name">Ultra</h3>
-            <div class="pricing-card-price">$50<span class="pricing-period">/month</span></div>
-            <p class="pricing-card-note">+ $3,500 one-time setup</p>
-          </div>
-          <ul class="pricing-card-features">
-            <li>Everything in Professional</li>
-            <li><strong>Full white-labeling</strong> — your logos, your colors</li>
-            <li><strong>Custom branded interface</strong></li>
-            <li>5+ custom AI agents</li>
-            <li>Multiple MCP integrations</li>
-            <li>Multi-tenant (sub-accounts for clients)</li>
-            <li>API access for your developers</li>
-            <li>Dedicated account manager</li>
-            <li>Priority support + model retraining</li>
-          </ul>
-          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button pricing-cta" id="pricing-ultra-cta">
-            Book a Demo <span class="arrow">→</span>
-          </a>
-        </div>
-
-        <!-- Enterprise -->
-        <div class="pricing-card pricing-card-enterprise reveal reveal-delay-4" id="pricing-enterprise">
-          <div class="pricing-card-header">
-            <h3 class="pricing-card-name">Enterprise</h3>
-            <div class="pricing-card-price">Contact Sales</div>
-            <p class="pricing-card-note">Custom LLM fine-tuning & dedicated infrastructure</p>
-          </div>
-          <ul class="pricing-card-features">
-            <li>Everything in Ultra</li>
-            <li>Custom LLM fine-tuning (domain-specific training)</li>
-            <li>Dedicated VPS / on-premise deployment</li>
-            <li>SLA guarantees</li>
-            <li>White-glove onboarding</li>
-            <li>Ongoing managed service</li>
-          </ul>
-          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button-outline pricing-cta" id="pricing-enterprise-cta">
-            Book a Call <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="pricing-footer reveal">
-        <p class="pricing-footer-note">
-          <strong>How billing works:</strong> One-time setup fee + monthly hosting subscription. 
-          You bring your own OpenRouter API key for AI usage (typically $5–$50/month depending on team size).
-          No long-term contracts. Cancel anytime.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
-  <section class="capabilities" id="how-it-works">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Setup</span>
-        <h2 class="section-heading">From zero to AI in under an hour.</h2>
-        <p class="section-subheading">
-          We handle the technical setup. You just point your team to the URL.
-        </p>
-      </div>
-
-      <div class="capabilities-grid">
-        <div class="capability-card reveal reveal-delay-1" id="setup-1">
-          <h4 class="capability-card-title">1. We Deploy</h4>
-          <p class="capability-card-text">We spin up Gombey AI on your infrastructure or ours — fully configured, secured, and branded.</p>
-        </div>
-        <div class="capability-card reveal reveal-delay-2" id="setup-2">
-          <h4 class="capability-card-title">2. Add Your API Keys</h4>
-          <p class="capability-card-text">Plug in your OpenAI, Anthropic, or OpenRouter keys. Or we can handle procurement for you.</p>
-        </div>
-        <div class="capability-card reveal reveal-delay-3" id="setup-3">
-          <h4 class="capability-card-title">3. Invite Your Team</h4>
-          <p class="capability-card-text">Send invites, set permissions, and watch your team start using AI that actually respects your data.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ FINAL CTA ═══════════════════ -->
-  <section class="final-cta" id="final-cta">
-    <div class="container">
-      <div class="final-cta-content reveal">
-        <span class="section-label" style="justify-content:center;">Ready?</span>
-        <h2 class="section-heading">Give your team AI without giving away your data.</h2>
-        <p class="section-subheading">
-          Book a 15-minute demo. We'll show you Gombey AI running live and answer any security questions.
-        </p>
-        <div class="final-cta-actions">
-          <a href="https://calendly.com/ianinho" target="_blank" rel="noopener" class="cta-button" id="final-book-demo">
-            Book a Demo <span class="arrow">→</span>
-          </a>
-          <a href="https://chat.gombeytech.com" target="_blank" rel="noopener" class="cta-button-outline" id="final-launch-ai">
-            Launch Gombey AI
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ FOOTER ═══════════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <img src="assets/gombey-ai-logo.png" alt="Gombey AI" class="footer-logo">
-          <span class="footer-brand">Gombey AI — by Gombey Tech LLC</span>
-        </div>
-        <div class="footer-right">
-          <a href="https://chat.gombeytech.com" target="_blank" rel="noopener" style="color: var(--color-accent); margin-right: 20px;">Launch AI</a>
-          © 2026 Gombey Tech LLC. All rights reserved.
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ═══════════════════ STICKY CTA ═══════════════════ -->
-  <div class="sticky-cta" id="sticky-cta">
-    <a href="https://chat.gombeytech.com" target="_blank" rel="noopener" class="cta-button" id="sticky-launch-ai">
-      Launch Gombey AI <span class="arrow">→</span>
-    </a>
-  </div>
+  <div class="sticky-cta" id="sticky-cta"><a href="https://calendly.com/ianinho" target="_blank" rel="noopener noreferrer" class="cta-button" id="sticky-launch-ai">Book a demo <span class="arrow" aria-hidden="true">→</span></a></div>
 
   <script src="main.js"></script>
 </body>
