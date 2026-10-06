@@ -317,7 +317,7 @@ button {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 28px;
   list-style: none;
 }
 
@@ -351,6 +351,15 @@ button {
 .nav-cta {
   padding: 10px 24px !important;
   font-size: 13px !important;
+}
+
+.nav-launch-link {
+  color: var(--color-accent) !important;
+  font-weight: 600 !important;
+}
+
+.nav-launch-link::after {
+  background: var(--color-accent) !important;
 }
 
 .nav-mobile-toggle {
@@ -410,6 +419,10 @@ button {
   margin-top: 32px;
   text-align: center;
   justify-content: center;
+}
+
+.nav-mobile-menu .mobile-launch-link {
+  color: var(--color-accent);
 }
 
 /* =========================================================================
@@ -537,6 +550,31 @@ button {
   opacity: 0;
   transform: translateY(30px);
   animation: heroReveal 0.9s var(--ease-out) 0.65s forwards;
+}
+
+.customer-launch {
+  margin-top: 20px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.customer-launch a {
+  color: var(--color-accent);
+  font-weight: 600;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.customer-launch a:hover {
+  color: var(--color-text-primary);
+}
+
+.customer-launch a span {
+  display: inline-block;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.customer-launch a:hover span {
+  transform: translate(2px, -2px);
 }
 
 @keyframes heroReveal {
@@ -968,6 +1006,101 @@ button {
 }
 
 /* =========================================================================
+   PRIVATE SYSTEMS
+   ========================================================================= */
+.systems {
+  padding: var(--section-padding) 0;
+  background: var(--color-bg-elevated);
+  position: relative;
+}
+
+.systems-header {
+  margin-bottom: 56px;
+}
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.system-card {
+  min-height: 270px;
+  padding: 32px;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.system-card:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-4px);
+}
+
+.system-card-kicker {
+  color: var(--color-accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.system-card h3,
+.systems-callout h3 {
+  font-family: var(--font-display);
+  font-size: 25px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.system-card p,
+.systems-callout p {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.system-fit {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.systems-callout {
+  margin-top: 32px;
+  padding: 32px;
+  border: 1px solid var(--color-accent-muted);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(212, 197, 160, 0.07), rgba(255, 255, 255, 0.015));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.systems-callout .section-label {
+  margin-bottom: 14px;
+}
+
+.systems-callout h3 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.systems-callout p {
+  max-width: 760px;
+}
+
+.systems-callout .cta-button-outline {
+  flex-shrink: 0;
+}
+
+/* =========================================================================
    PROCESS SECTION
    ========================================================================= */
 .process {
@@ -1214,6 +1347,14 @@ button {
 }
 
 @media (max-width: 1024px) {
+  .systems-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .system-card:last-child {
+    grid-column: 1 / -1;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -1221,6 +1362,24 @@ button {
 }
 
 @media (max-width: 768px) {
+  .systems-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .system-card:last-child {
+    grid-column: auto;
+  }
+
+  .systems-callout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .systems-callout .cta-button-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
   .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
