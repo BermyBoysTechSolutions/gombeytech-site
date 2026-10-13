@@ -25,6 +25,7 @@
   --color-accent: #d4c5a0;
   --color-accent-hover: #e2d5b4;
   --color-accent-muted: rgba(212, 197, 160, 0.15);
+  --color-launch-red: #ff6368;
 
   /* CTA — confident warm tone */
   --color-cta: #d4c5a0;
@@ -1296,9 +1297,10 @@ button {
   width: fit-content;
   margin: 2px auto;
   padding: 5px 10px;
-  border: 1px solid rgba(212, 197, 160, 0.45);
+  border: 1px solid rgba(255, 99, 104, 0.55);
   border-radius: 999px;
-  color: var(--color-accent);
+  color: var(--color-launch-red);
+  background: rgba(255, 99, 104, 0.08);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1310,13 +1312,38 @@ button {
 }
 
 .setup-price s {
-  color: var(--color-text-muted);
+  color: var(--color-text-primary);
   margin-right: 4px;
 }
 
 .setup-price strong {
-  color: var(--color-accent);
+  color: var(--color-launch-red);
   font-size: 1.1em;
+}
+
+.setup-price-label {
+  color: var(--color-text-secondary);
+  font-size: 0.9em;
+}
+
+.pricing-card-price-launch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.pricing-card-price-launch > span {
+  color: var(--color-text-primary);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pricing-card-price-launch > strong {
+  color: var(--color-launch-red);
+  font-size: 1.25em;
 }
 
 .payment-milestone {
