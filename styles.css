@@ -1829,6 +1829,332 @@ button {
   }
 }
 
+/* ─── Gombey Tech consultancy redesign ─── */
+.nav-logo {
+  gap: 14px;
+}
+
+.nav-company-name {
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.hero-title {
+  max-width: 920px;
+}
+
+.hero-description {
+  max-width: 650px;
+}
+
+.hero-note {
+  max-width: 660px;
+}
+
+.services-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+}
+
+.service-kicker {
+  position: relative;
+  z-index: 1;
+  margin: -8px 0 12px;
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.service-points {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 18px 0 22px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.service-points li {
+  position: relative;
+  padding: 7px 0 7px 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.service-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.service-cta {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 8px;
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.service-cta:hover,
+.footer-right a:hover {
+  color: var(--color-text-primary);
+}
+
+.section-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 52px;
+  text-align: center;
+}
+
+.section-cta > p {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+}
+
+.about-section {
+  overflow: hidden;
+}
+
+.about-aside {
+  position: relative;
+  z-index: 1;
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, rgba(212, 197, 160, 0.09), rgba(255, 255, 255, 0.02));
+}
+
+.about-aside-label {
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-aside-quote {
+  margin-top: 26px;
+  font-family: var(--font-display);
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.about-aside-divider {
+  width: 56px;
+  height: 2px;
+  margin: 30px 0;
+  background: var(--color-accent);
+}
+
+.about-aside-copy {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 30px;
+}
+
+.about-tags span {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border-hover);
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.about-cta {
+  justify-content: flex-start;
+  margin-top: 34px;
+}
+
+.ai-capabilities {
+  background: var(--color-bg-elevated);
+}
+
+.ai-concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ai-concept {
+  min-height: 210px;
+  padding: 30px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-card);
+}
+
+.ai-concept h3 {
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.ai-concept p,
+.ai-boundary {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.ai-boundary {
+  max-width: 880px;
+  margin: 30px auto 0;
+  padding: 18px 22px;
+  border-left: 2px solid var(--color-accent);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.approach-section header {
+  max-width: 760px;
+}
+
+.capability-card {
+  min-height: 230px;
+}
+
+.capability-card-title {
+  font-size: 20px;
+}
+
+.capability-card-text {
+  font-size: 15px;
+}
+
+.quote-section {
+  background: var(--color-bg-elevated);
+}
+
+.quote-panel {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 60px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, rgba(212, 197, 160, 0.07), rgba(255, 255, 255, 0.015));
+}
+
+.quote-panel .section-heading {
+  max-width: 760px;
+}
+
+.quote-panel .section-subheading {
+  max-width: 760px;
+}
+
+.quote-points {
+  display: grid;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.quote-points p {
+  padding: 15px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.quote-points strong {
+  color: var(--color-text-primary);
+}
+
+.footer-right a {
+  color: var(--color-accent);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer-copyright {
+  display: block;
+  margin-top: 8px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    gap: 8px;
+  }
+
+  .nav-logo img {
+    height: 62px;
+  }
+
+  .nav-company-name {
+    font-size: 13px;
+  }
+
+  .services-grid,
+  .ai-concepts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    min-height: auto;
+    padding: 30px 24px;
+  }
+
+  .section-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .section-cta .cta-button {
+    justify-content: center;
+  }
+
+  .about-cta {
+    align-items: flex-start;
+  }
+
+  .about-cta .cta-button {
+    width: 100%;
+  }
+
+  .ai-concept {
+    min-height: auto;
+  }
+
+  .footer-copyright {
+    text-align: center;
+  }
+}
+
 /* =========================================================================
    PREFERS REDUCED MOTION
    ========================================================================= */
@@ -1956,4 +2282,23 @@ body.js-ready .reveal.visible {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* Final responsive overrides for the Gombey Tech consultancy page. */
+@media (max-width: 768px) {
+  .nav-logo img {
+    height: 62px;
+  }
+}
+
+.footer-right {
+  line-height: 1.8;
+}
+
+.nav-logo:focus-visible,
+.service-cta:focus-visible,
+.footer-right a:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
 }

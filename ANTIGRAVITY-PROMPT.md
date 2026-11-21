@@ -1,44 +1,27 @@
-# Gombey AI — Project Brief
+# Gombey Tech — Website Brief
 
-## Overview
-Gombey AI is a private, white-labeled AI workspace for businesses. It provides teams with secure access to multiple leading AI models through a single interface.
+## Company and public offer
 
-## Product URL
-https://chat.gombeytech.com
+Gombey Tech LLC is a Raleigh-Durham technology consultancy for small businesses. The public site presents four service areas: practical AI consulting and workflow setup, AI hardware planning and configuration, small-business websites, and business IT guidance/setup.
 
-## Target Audience
-- Businesses concerned about data privacy with public AI tools
-- Teams currently paying for multiple AI subscriptions
-- Companies wanting a branded AI experience for clients/employees
-- Organizations needing compliance (HIPAA, SOC2) without building from scratch
+The site uses the existing Gombey logo artwork and black, ivory, and gold palette. The public company name is Gombey Tech. The customer workspace remains at https://chat.gombeytech.com/ for existing customers.
 
-## Key Messages
-1. **Privacy First:** Self-hosted. Your data never trains models. Never leaves your control.
-2. **Unified Access:** One subscription, 15+ AI models. No more juggling ChatGPT, Claude, and Gemini separately.
-3. **White-Labeled:** Your brand, your domain. Looks like your product.
-4. **Enterprise Ready:** Team management, usage controls, audit logs.
+## Positioning and boundaries
 
-## Differentiators from ChatGPT Enterprise / Claude for Work
-- Self-hosted (not SaaS — you control the infrastructure)
-- Multi-model (not locked to one provider)
-- No per-seat pricing (unlimited users)
-- Open-source foundation (no vendor lock-in)
+- Lead with plain-language outcomes and a real, scoped service; do not rely on AI buzzwords.
+- Describe agent orchestration, RAG, MCP, and model selection/routing in terms of what they do and how they are tested.
+- Do not imply unvalidated customer deployments, guaranteed productivity improvements, legal/compliance outcomes, or blanket privacy.
+- Explain that customer-selected cloud model providers process cloud prompts under their own service terms; local inference is described as local only after the agreed data path is verified.
+- The initial consultation is free. Do not publish a generic tier price for unlike projects. Provide a written fixed-scope quote after discovery; identify hardware, software, model/API usage, travel, and other external costs separately.
+- Every section/page has a clear free-consultation call to action.
+- Keep existing customer sign-in discreetly available, without making it the primary new-customer action.
 
-## Pages/Sections
-1. Hero — "Your team's AI. Your data. Your control."
-2. Features — Multi-model, private, file upload, memory, team workspace, white-label
-3. Models — Showcase available AI models
-4. Security — Self-hosted, no training on data, admin controls
-5. Pricing — Starter ($299/mo), Business ($799/mo), Enterprise (custom)
-6. Setup — "Zero to AI in under an hour"
-7. CTA — Book demo or launch AI directly
+## Main site
 
-## CTA
-Primary: "Launch Gombey AI" → https://chat.gombeytech.com
-Secondary: "Book a Demo" → https://calendly.com/ianinho
+- https://gombeytech.com
+- Consultation booking: https://calendly.com/ianinho
+- Existing customer workspace: https://chat.gombeytech.com/
 
-## Design Notes
-- Keep the premium dark aesthetic from the original agency site
-- Update colors if needed to feel more "AI/product" vs "agency"
-- Maintain trust-building elements (stats, security badges)
-- Make the product feel enterprise-grade but accessible
+## About Ian
+
+Use only verified resume facts. Ian Simmons is an IT systems and operations professional with more than six years of experience. His current role supports an enterprise environment of more than 2,000 users, including Microsoft 365 and identity administration. He led a nationwide RingCentral deployment across four corporate entities and built Python/REST API automation for user provisioning and call routing. AI orchestration, RAG, MCP, and model evaluation should be framed as hands-on technical/project experience, not as a claim of mature client deployments.

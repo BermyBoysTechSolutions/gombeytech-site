@@ -1,12 +1,12 @@
-# Gombey AI landing page
+# Gombey Tech website
 
-Static landing page for Gombey AI, a business workspace for teams using connected AI model providers.
+Static marketing site for Gombey Tech LLC, a Raleigh-Durham technology consulting business offering practical AI, business IT, hardware, and website services.
 
 ## Public sites
 
 - Main site: https://gombeytech.com
 - Customer workspace: https://chat.gombeytech.com
-- Demo booking: https://calendly.com/ianinho
+- Free consultation booking: https://calendly.com/ianinho
 
 ## Local preview
 
@@ -16,4 +16,4 @@ Serve this directory with any static HTTP server, for example:
 python3 -m http.server 4173
 ```
 
-The landing page includes customer launch links to `chat.gombeytech.com`; the customer workspace handles authentication and access.
+The site keeps the existing logo artwork and dark/gold visual identity. Project pricing is scoped and quoted in writing after a free consultation; the site does not publish package prices.

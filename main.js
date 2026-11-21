@@ -1,4 +1,4 @@
-/* Gombey AI landing page interactions. */
+/* Gombey Tech website interactions. */
 
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('js-ready');
