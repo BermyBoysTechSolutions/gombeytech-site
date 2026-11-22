@@ -1831,16 +1831,7 @@ button {
 
 /* ─── Gombey Tech consultancy redesign ─── */
 .nav-logo {
-  gap: 14px;
-}
-
-.nav-company-name {
-  color: var(--color-text-primary);
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
+  gap: 0;
 }
 
 .hero-title {
@@ -2113,10 +2104,6 @@ button {
 
   .nav-logo img {
     height: 62px;
-  }
-
-  .nav-company-name {
-    font-size: 13px;
   }
 
   .services-grid,

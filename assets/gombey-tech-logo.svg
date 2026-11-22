@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1176 804" role="img" aria-labelledby="title">
+  <title id="title">Gombey Tech</title>
+  <defs>
+    <clipPath id="hat-only" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="1176" height="550" />
+    </clipPath>
+  </defs>
+  <image href="gombey-ai-logo.png" x="0" y="0" width="1176" height="804" clip-path="url(#hat-only)" />
+  <text x="588" y="724" text-anchor="middle" textLength="1046" lengthAdjust="spacingAndGlyphs" font-family="Arial, Helvetica, sans-serif" font-size="154" font-weight="700" letter-spacing="2">
+    <tspan fill="#f0ece4">GOMBEY</tspan><tspan fill="#d4c5a0"> TECH</tspan>
+  </text>
+</svg>
