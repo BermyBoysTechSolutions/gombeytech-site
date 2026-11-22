@@ -3,6 +3,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('js-ready');
 
+  // Keep service links ready for distinct Calendly event URLs. Until those
+  // event types exist, each anchor retains the main profile-page fallback.
+  const calendlyServiceUrls = {
+    'ai-workflow': null,
+    'ai-hardware': null,
+    website: null,
+    'business-it': null,
+  };
+  document.querySelectorAll('[data-calendly-service]').forEach((link) => {
+    const eventUrl = calendlyServiceUrls[link.dataset.calendlyService];
+    if (eventUrl) link.href = eventUrl;
+  });
+
   const nav = document.getElementById('main-nav');
   const circuitLayer = document.getElementById('circuit-parallax');
   const glowCursor = document.getElementById('glow-cursor');

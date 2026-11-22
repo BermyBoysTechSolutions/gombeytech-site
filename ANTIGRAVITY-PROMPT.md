@@ -14,6 +14,7 @@ The site uses the existing Gombey logo artwork and black, ivory, and gold palett
 - Explain that customer-selected cloud model providers process cloud prompts under their own service terms; local inference is described as local only after the agreed data path is verified.
 - The initial consultation is free. Do not publish a generic tier price for unlike projects. Provide a written fixed-scope quote after discovery; identify hardware, software, model/API usage, travel, and other external costs separately.
 - Every section/page has a clear free-consultation call to action.
+- Until service-specific Calendly event types exist, every consultation CTA uses `https://calendly.com/ianinho`; service cards have separate stable service keys so their destinations can be mapped individually later.
 - Keep existing customer sign-in discreetly available, without making it the primary new-customer action.
 
 ## Main site

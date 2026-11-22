@@ -17,3 +17,5 @@ python3 -m http.server 4173
 ```
 
 The site keeps the existing logo artwork and dark/gold visual identity. Project pricing is scoped and quoted in writing after a free consultation; the site does not publish package prices.
+
+All consultation actions currently fall back to the Calendly profile page. The four service-card links are marked by service key in `index.html` and `main.js`, so they can be mapped to distinct event URLs once those Calendly event types are created.
