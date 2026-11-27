@@ -1,6 +1,6 @@
 # Gombey Tech website
 
-Static marketing site for Gombey Tech LLC, a Raleigh-Durham technology consulting business offering practical AI, business IT, hardware, and website services.
+Static marketing site for Gombey Tech, a Raleigh-Durham technology consulting business offering practical AI, business IT, hardware, and website services.
 
 ## Public sites
 

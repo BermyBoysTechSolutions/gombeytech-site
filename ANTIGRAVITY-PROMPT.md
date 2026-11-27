@@ -2,7 +2,7 @@
 
 ## Company and public offer
 
-Gombey Tech LLC is a Raleigh-Durham technology consultancy for small businesses. The public site presents four service areas: practical AI consulting and workflow setup, AI hardware planning and configuration, small-business websites, and business IT guidance/setup.
+Gombey Tech is a Raleigh-Durham technology consultancy for small businesses. The public site presents four service areas: practical AI consulting and workflow setup, AI hardware planning and configuration, small-business websites, and business IT guidance/setup.
 
 The site uses the existing Gombey logo artwork and black, ivory, and gold palette. The public company name is Gombey Tech. The customer workspace remains at https://chat.gombeytech.com/ for existing customers.
 
